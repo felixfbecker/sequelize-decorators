@@ -1,14 +1,12 @@
 {
   "name": "sequelize-decorators",
   "version": false,
-  "dependencies": {
-    "sequelize": "github:louy/typed-sequelize/4",
-    "sinon": "registry:npm/sinon#1.16.0+20160723033700"
-  },
-  "globalDependencies": {
-    "node": "registry:env/node#6.0.0+20160622202520"
-  },
   "globalDevDependencies": {
-    "mocha": "registry:env/mocha#2.2.5+20160723033700"
+    "mocha": "registry:env/mocha#2.2.5+20160723033700",
+    "node": "registry:env/node#6.0.0+20160825160117"
+  },
+  "devDependencies": {
+    "sequelize": "registry:npm/sequelize#4.0.0-1+20160828072620",
+    "sinon": "registry:npm/sinon#1.16.0+20160723033700"
   }
 }
