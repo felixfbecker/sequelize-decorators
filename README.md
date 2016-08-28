@@ -9,10 +9,10 @@
 
 A proof of concept for using Sequelize with decorators.
 
- - [Usage with TypeScript](#typescript)
- - [Usage with Babel](#babel)
+ - [Usage with TypeScript](#usage-with-typescript)
+ - [Usage with Babel](#usage-with-babel)
 
-## TypeScript
+## Usage with TypeScript
 
 ### Installation
 
@@ -78,7 +78,7 @@ The `@Options` decorator is required.
  `Buffer`        | `BLOB`
 
 
-## Babel
+## Usage with Babel
 
 
 ### Installation
