@@ -97,7 +97,7 @@ Add to your `.babelrc`:
 
 ```ts
 import {Sequelize, Model, DataTypes} from 'sequelize'
-import {Options, Attribute} from 'sequelize-decorators'
+import {Options, Attributes} from 'sequelize-decorators'
 
 const sequelize = new Sequelize(process.env.DB)
 
