@@ -106,7 +106,12 @@ const sequelize = new Sequelize(process.env.DB)
     tableName: 'users'
 })
 @Attributes({
-    username: DataTypes.STRING
+    username: {
+        type: DataTypes.STRING,
+        primaryKey: true
+    },
+    lastName: DataTypes.STRING,
+    firstName: DataTypes.STRING,
 })
 export class User extends Model {
 
