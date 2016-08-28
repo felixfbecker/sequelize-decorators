@@ -30,7 +30,7 @@ The second setting lets sequelize-decorators infer the type of attributes from t
 
 ### Example:
 
-```ts
+```js
 import {Sequelize, Model, DataTypes} from 'sequelize'
 import {Options, Attribute} from 'sequelize-decorators'
 
@@ -95,7 +95,7 @@ Add to your `.babelrc`:
 
 ### Example:
 
-```ts
+```js
 import {Sequelize, Model, DataTypes} from 'sequelize'
 import {Options, Attributes} from 'sequelize-decorators'
 
