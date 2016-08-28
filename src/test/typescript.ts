@@ -20,6 +20,18 @@ describe('TypeScript', () => {
 
                 @Attribute(DataTypes.STRING)
                 public username: string;
+
+                @Attribute()
+                public street: string;
+
+                @Attribute()
+                public loginCount: number;
+
+                @Attribute()
+                public lastLogin: Date;
+
+                @Attribute()
+                public passwordHash: Buffer;
             }
 
             assert(stub.calledOnce);
@@ -28,6 +40,10 @@ describe('TypeScript', () => {
 
             assert.equal(typeof attributes, 'object');
             assert.equal(attributes.username, DataTypes.STRING);
+            assert.equal(attributes.street, DataTypes.STRING);
+            assert.equal(attributes.loginCount, DataTypes.INTEGER);
+            assert.equal(attributes.lastLogin, DataTypes.DATE);
+            assert.equal(attributes.passwordHash, DataTypes.BLOB);
 
             assert.equal(typeof options, 'object');
             assert.equal(options.sequelize, sequelize);
