@@ -19,7 +19,8 @@ describe('Babel', () => {
 
             assert(stub.calledOnce);
 
-            const [[attributes, options]] = stub.args;
+            const attributes = stub.args[0][0];
+            const options = stub.args[0][1];
 
             assert.equal(typeof attributes, 'object');
             assert.equal(attributes.username, DataTypes.STRING);
