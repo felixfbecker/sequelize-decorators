@@ -20,7 +20,7 @@ it('should call Model.init with correct attributes and options', () => {
             public username: string;
         }
 
-        assert(stub.calledOnce)
+        assert(stub.calledOnce);
 
         const [[attributes, options]] = stub.args;
 
@@ -34,4 +34,4 @@ it('should call Model.init with correct attributes and options', () => {
 
         stub.restore();
     }
-})
+});
