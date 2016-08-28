@@ -4,7 +4,7 @@
   "description": "Sequelize + Decorators = ❤",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc -p . & babel src --out-dir dist",
+    "build": "tsc -p . && babel src --out-dir dist",
     "watch": "tsc -w -p . & babel src --out-dir dist --watch",
     "test": "mocha dist/test",
     "lint": "tslint -c tslint.json src/**/*.ts"
