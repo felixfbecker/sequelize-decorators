@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Sequelize + Decorators = ❤",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p . && babel src --out-dir dist",
     "watch": "tsc -w -p . & babel src --out-dir dist --watch",
