@@ -1,5 +1,5 @@
 /// <reference path="../node_modules/reflect-metadata/typings.d.ts" />
-import {Model, InitOptions, ModelAttributes, DataTypes, ModelAttributeColumnOptions, Sequelize} from 'sequelize';
+import {Model, InitOptions, ModelAttributes, DataTypes, ModelAttributeColumnOptions} from 'sequelize';
 import 'reflect-metadata';
 
 const S_ATTRIBUTES = Symbol('attributes');
