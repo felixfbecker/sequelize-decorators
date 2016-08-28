@@ -1,0 +1,4 @@
+src/
+typings/
+node_modules/
+.vscode/
