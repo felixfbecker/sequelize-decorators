@@ -1,26 +1,21 @@
 
-import assert = require('assert');
+import assert from 'assert';
 import {Sequelize, Model, DataTypes} from 'sequelize';
-import {Options, Attribute} from '../index';
+import {Options, Attributes} from '../index';
 import * as sinon from 'sinon';
 
 // Just a dummy
-const sequelize: Sequelize = Object.create(Sequelize.prototype);
+const sequelize = Object.create(Sequelize.prototype);
 
-describe('TypeScript', () => {
-
+describe('Babel', () => {
     it('should call Model.init with correct attributes and options', () => {
 
         const stub = sinon.stub(Model, 'init');
 
         try {
-
             @Options({sequelize})
-            class User extends Model {
-
-                @Attribute(DataTypes.STRING)
-                public username: string;
-            }
+            @Attributes({username: Sequelize.STRING})
+            class User extends Model {} // eslint-disable-line no-unused-vars
 
             assert(stub.calledOnce);
 
@@ -37,5 +32,5 @@ describe('TypeScript', () => {
             stub.restore();
         }
     });
+})
 
-});

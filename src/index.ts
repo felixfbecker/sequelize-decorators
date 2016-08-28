@@ -8,7 +8,7 @@ export function Options(options: InitOptions) {
     return function(model: typeof Model): void {
         const attributes: ModelAttributes = Reflect.getMetadata(S_ATTRIBUTES, model) || {};
         model.init(attributes, options);
-    }
+    };
 }
 
 export function Attribute(options?: string | DataTypes.DataType | ModelAttributeColumnOptions) {
@@ -26,5 +26,11 @@ export function Attribute(options?: string | DataTypes.DataType | ModelAttribute
         const attributes: ModelAttributes = Reflect.getMetadata(S_ATTRIBUTES, prototype.constructor) || {};
         attributes[name] = options;
         Reflect.defineMetadata(S_ATTRIBUTES, attributes, prototype.constructor);
-    }
+    };
+}
+
+export function Attributes(attributes: ModelAttributes) {
+    return function(model: typeof Model): void {
+        Reflect.defineMetadata(S_ATTRIBUTES, attributes, model);
+    };
 }

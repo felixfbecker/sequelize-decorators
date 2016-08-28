@@ -1,0 +1,5 @@
+{
+  "sourceMaps": true,
+  "plugins": ["transform-decorators-legacy"],
+  "presets": ["es2015-node4"]
+}
