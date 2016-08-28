@@ -66,7 +66,7 @@ export class User extends Model {
 }
 ```
 
-The `@Options` decorator is required.
+The `@Options` decorator is required and must include the `sequelize` option (the connection to use).
 
 ### Type inference
 
@@ -127,4 +127,4 @@ export class User extends Model {
 }
 ```
 
-The `@Options` decorator is required.
+The `@Options` decorator is required and must include the `sequelize` option (the connection to use).
