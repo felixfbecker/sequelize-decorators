@@ -4,14 +4,14 @@ import 'reflect-metadata';
 
 const S_ATTRIBUTES = Symbol('attributes');
 
-export function Options(options: InitOptions) {
+export function options(options: InitOptions) {
     return function(model: typeof Model): void {
         const attributes: ModelAttributes = Reflect.getMetadata(S_ATTRIBUTES, model) || {};
         model.init(attributes, options);
     };
 }
 
-export function Attribute(options?: string | DataTypes.DataType | ModelAttributeColumnOptions) {
+export function attribute(options?: string | DataTypes.DataType | ModelAttributeColumnOptions) {
     return function(prototype: Object, name: string): void {
         const type = Reflect.getMetadata('design:type', prototype, name);
         if (!options && type) {
@@ -29,7 +29,7 @@ export function Attribute(options?: string | DataTypes.DataType | ModelAttribute
     };
 }
 
-export function Attributes(attributes: ModelAttributes) {
+export function attributes(attributes: ModelAttributes) {
     return function(model: typeof Model): void {
         Reflect.defineMetadata(S_ATTRIBUTES, attributes, model);
     };
