@@ -1,4 +1,3 @@
-/// <reference path="../node_modules/reflect-metadata/typings.d.ts" />
 import {Model, InitOptions, ModelAttributes, DataTypes, ModelAttributeColumnOptions} from 'sequelize';
 import 'reflect-metadata';
 
