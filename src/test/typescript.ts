@@ -14,12 +14,16 @@ describe('TypeScript', () => {
         const stub = sinon.stub(Model, 'init');
 
         try {
+            const usernameAttribute = {type: DataTypes.STRING, unique: true};
 
             @Options({sequelize})
             class User extends Model {
 
+                @Attribute(usernameAttribute)
+                public username: number; // not using string here to check it is not inferring
+
                 @Attribute(DataTypes.STRING)
-                public username: string;
+                public firstName: number; // not using string here to check it is not inferring
 
                 @Attribute()
                 public street: string;
@@ -40,7 +44,7 @@ describe('TypeScript', () => {
             const options = stub.args[0][1];
 
             assert.equal(typeof attributes, 'object');
-            assert.equal(attributes.username, DataTypes.STRING);
+            assert.equal(attributes.username, usernameAttribute);
             assert.equal(attributes.street, DataTypes.STRING);
             assert.equal(attributes.loginCount, DataTypes.INTEGER);
             assert.equal(attributes.lastLogin, DataTypes.DATE);

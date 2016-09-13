@@ -13,7 +13,8 @@ export function Options(options: InitOptions) {
 export function Attribute(options?: string | DataTypes.DataType | ModelAttributeColumnOptions) {
     return function(prototype: Object, name: string): void {
         const type = Reflect.getMetadata('design:type', prototype, name);
-        if (!options && type) {
+        /* istanbul ignore else */
+        if (type && (!options || (typeof options !== 'string' && !(options instanceof DataTypes.ABSTRACT) && !(<ModelAttributeColumnOptions>options).type))) {
             switch (type) {
                 case String: options = DataTypes.STRING; break;
                 case Number: options = DataTypes.INTEGER; break;
