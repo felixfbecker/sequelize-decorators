@@ -33,26 +33,26 @@ The second setting lets sequelize-decorators infer the type of attributes from t
 
 ```js
 import {Sequelize, Model, DataTypes} from 'sequelize'
-import {Options, Attribute} from 'sequelize-decorators'
+import {options, attribute} from 'sequelize-decorators'
 
 const sequelize = new Sequelize(process.env.DB)
 
-@Options({
+@options({
     sequelize,
     tableName: 'users'
 })
 export class User extends Model {
 
-    @Attribute({
+    @attribute({
         type: DataTypes.STRING,
         primaryKey: true
     })
     public username: string;
 
-    @Attribute(DataTypes.STRING)
+    @attribute(DataTypes.STRING)
     public firstName: string;
 
-    @Attribute() // Type is inferred as DataTypes.STRING
+    @attribute() // Type is inferred as DataTypes.STRING
     public lastName: string;
 
     get fullName(): string {
@@ -67,7 +67,7 @@ export class User extends Model {
 }
 ```
 
-The `@Options` decorator is required and must include the `sequelize` option (the connection to use).
+The `@options` decorator is required and must include the `sequelize` option (the connection to use).
 
 ### Type inference
 
@@ -98,15 +98,15 @@ Add to your `.babelrc`:
 
 ```js
 import {Sequelize, Model, DataTypes} from 'sequelize'
-import {Options, Attributes} from 'sequelize-decorators'
+import {options, attributes} from 'sequelize-decorators'
 
 const sequelize = new Sequelize(process.env.DB)
 
-@Options({
+@options({
     sequelize,
     tableName: 'users'
 })
-@Attributes({
+@attributes({
     username: {
         type: DataTypes.STRING,
         primaryKey: true
@@ -128,4 +128,4 @@ export class User extends Model {
 }
 ```
 
-The `@Options` decorator is required and must include the `sequelize` option (the connection to use).
+The `@options` decorator is required and must include the `sequelize` option (the connection to use).

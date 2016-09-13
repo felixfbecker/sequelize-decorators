@@ -1,7 +1,7 @@
 
 import assert = require('assert');
 import {Sequelize, Model, DataTypes} from 'sequelize';
-import {Options, Attribute} from '../index';
+import {options, attribute} from '../index';
 import * as sinon from 'sinon';
 
 // Just a dummy
@@ -15,39 +15,39 @@ describe('TypeScript', () => {
 
         try {
 
-            @Options({sequelize})
+            @options({sequelize})
             class User extends Model {
 
-                @Attribute(DataTypes.STRING)
+                @attribute(DataTypes.STRING)
                 public username: string;
 
-                @Attribute()
+                @attribute()
                 public street: string;
 
-                @Attribute()
+                @attribute()
                 public loginCount: number;
 
-                @Attribute()
+                @attribute()
                 public lastLogin: Date;
 
-                @Attribute()
+                @attribute()
                 public passwordHash: Buffer;
             }
 
             assert(stub.calledOnce);
 
-            const attributes = stub.args[0][0];
-            const options = stub.args[0][1];
+            const attributesArg = stub.args[0][0];
+            const optionsArg = stub.args[0][1];
 
-            assert.equal(typeof attributes, 'object');
-            assert.equal(attributes.username, DataTypes.STRING);
-            assert.equal(attributes.street, DataTypes.STRING);
-            assert.equal(attributes.loginCount, DataTypes.INTEGER);
-            assert.equal(attributes.lastLogin, DataTypes.DATE);
-            assert.equal(attributes.passwordHash, DataTypes.BLOB);
+            assert.equal(typeof attributesArg, 'object');
+            assert.equal(attributesArg.username, DataTypes.STRING);
+            assert.equal(attributesArg.street, DataTypes.STRING);
+            assert.equal(attributesArg.loginCount, DataTypes.INTEGER);
+            assert.equal(attributesArg.lastLogin, DataTypes.DATE);
+            assert.equal(attributesArg.passwordHash, DataTypes.BLOB);
 
-            assert.equal(typeof options, 'object');
-            assert.equal(options.sequelize, sequelize);
+            assert.equal(typeof optionsArg, 'object');
+            assert.equal(optionsArg.sequelize, sequelize);
 
         } finally {
 

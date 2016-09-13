@@ -1,7 +1,7 @@
 
 import assert from 'assert';
 import {Sequelize, Model, DataTypes} from 'sequelize';
-import {Options, Attributes} from '../index';
+import {options, attributes} from '../index';
 import * as sinon from 'sinon';
 
 // Just a dummy
@@ -13,20 +13,20 @@ describe('Babel', () => {
         const stub = sinon.stub(Model, 'init');
 
         try {
-            @Options({sequelize})
-            @Attributes({username: Sequelize.STRING})
+            @options({sequelize})
+            @attributes({username: Sequelize.STRING})
             class User extends Model {} // eslint-disable-line no-unused-vars
 
             assert(stub.calledOnce);
 
-            const attributes = stub.args[0][0];
-            const options = stub.args[0][1];
+            const attributesArg = stub.args[0][0];
+            const optionsArg = stub.args[0][1];
 
-            assert.equal(typeof attributes, 'object');
-            assert.equal(attributes.username, DataTypes.STRING);
+            assert.equal(typeof attributesArg, 'object');
+            assert.equal(attributesArg.username, DataTypes.STRING);
 
-            assert.equal(typeof options, 'object');
-            assert.equal(options.sequelize, sequelize);
+            assert.equal(typeof optionsArg, 'object');
+            assert.equal(optionsArg.sequelize, sequelize);
 
         } finally {
 
