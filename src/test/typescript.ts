@@ -59,4 +59,30 @@ describe('TypeScript', () => {
         }
     });
 
+    it('should call Model.init correctly when only @Options was used', () => {
+
+        const stub = sinon.stub(Model, 'init');
+
+        try {
+
+            @Options({sequelize})
+            class User extends Model {}
+
+            sinon.assert.calledOnce(stub);
+
+            const attributes = stub.args[0][0];
+            const options = stub.args[0][1];
+
+            assert.equal(typeof attributes, 'object');
+            assert.deepEqual(attributes, {});
+
+            assert.equal(typeof options, 'object');
+            assert.equal(options.sequelize, sequelize);
+
+        } finally {
+
+            stub.restore();
+        }
+    });
+
 });
