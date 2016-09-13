@@ -8,6 +8,7 @@
     "build": "tsc -p . && babel src --out-dir dist",
     "watch": "tsc -w -p . & babel src --out-dir dist --watch",
     "test": "mocha dist/test",
+    "cover": "nyc --all --require source-map-support/register mocha dist/test",
     "lint": "tslint -c tslint.json src/**/*.ts"
   },
   "author": "Felix Becker <felix.b@outlook.com>",
@@ -27,12 +28,23 @@
     "babel-eslint": "^6.1.2",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015-node4": "^2.1.0",
+    "codecov": "^1.0.1",
     "eslint": "^3.4.0",
     "mocha": "^3.0.2",
+    "nyc": "^8.1.0",
     "sequelize": "^4.0.0-1",
     "sinon": "^1.17.5",
+    "source-map-support": "^0.4.2",
     "tslint": "^3.10.1",
     "typescript": "^1.8.10",
     "typings": "^1.3.3"
+  },
+  "nyc": {
+    "include": [
+      "dist/**/*.js"
+    ],
+    "exclude": [
+      "dist/test/**/*.js"
+    ]
   }
 }
