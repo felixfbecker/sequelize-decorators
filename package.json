@@ -37,7 +37,7 @@
     "source-map-support": "^0.4.2",
     "tslint": "^3.10.1",
     "typescript": "^2.0.3",
-    "typings": "^1.3.3"
+    "typings": "^2.0.0"
   },
   "nyc": {
     "include": [
