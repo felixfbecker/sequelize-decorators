@@ -35,7 +35,7 @@
     "sequelize": "^4.0.0-1",
     "sinon": "^1.17.5",
     "source-map-support": "^0.4.2",
-    "tslint": "^3.10.1",
+    "tslint": "^4.0.1",
     "typescript": "^2.0.3",
     "typings": "^2.0.0"
   },
