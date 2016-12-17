@@ -8,7 +8,11 @@
     "outDir": "dist",
     "sourceMap": true,
     "declaration": true,
-    "inlineSources": true
+    "inlineSources": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true
   },
   "exclude": [
     "node_modules",
