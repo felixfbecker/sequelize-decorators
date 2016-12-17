@@ -1,14 +1,10 @@
 language: node_js
 node_js:
  - 'node'
- - '4'
-env:
-  matrix:
-   - TS_VERSION=1
-   - TS_VERSION=2
+ - 6
+ - 4
 install:
  - npm install
- - npm install typescript@$TS_VERSION
  - typings install
 script:
  - npm run lint
