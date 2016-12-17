@@ -24,7 +24,9 @@ export function Attribute(options?: string | DataTypes.DataType | ModelAttribute
             }
         }
         const attributes: ModelAttributes = Reflect.getMetadata(S_ATTRIBUTES, prototype.constructor) || {};
-        attributes[name] = options;
+        if (options) {
+            attributes[name] = options;
+        }
         Reflect.defineMetadata(S_ATTRIBUTES, attributes, prototype.constructor);
     };
 }
