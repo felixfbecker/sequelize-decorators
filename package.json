@@ -1,6 +1,6 @@
 {
   "name": "sequelize-decorators",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Sequelize + Decorators = ❤",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
