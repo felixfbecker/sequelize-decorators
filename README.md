@@ -1,8 +1,6 @@
 
 # Sequelize + Decorators = ❤
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/felixfbecker/sequelize-decorators.svg)](https://greenkeeper.io/)
-
 [![Version](https://img.shields.io/npm/v/sequelize-decorators.svg?maxAge=2592000)](https://www.npmjs.com/package/sequelize-decorators)
 [![Downloads](https://img.shields.io/npm/dt/sequelize-decorators.svg?maxAge=2592000)](https://www.npmjs.com/package/sequelize-decorators)
 [![Build Status](https://travis-ci.org/felixfbecker/sequelize-decorators.svg?branch=master)](https://travis-ci.org/felixfbecker/sequelize-decorators)
