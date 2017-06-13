@@ -18,8 +18,7 @@ A proof of concept for using Sequelize with decorators.
 ### Installation
 
 ```
-typings install sequelize@4.0.0-1
-npm install --save sequelize@4.0.0-1 sequelize-decorators
+npm install --save sequelize sequelize-decorators
 ```
 
 Add to your `tsconfig.json`:
@@ -85,7 +84,7 @@ The `@Options` decorator is required and must include the `sequelize` option (th
 ### Installation
 
 ```
-npm install --save sequelize@4.0.0-1 sequelize-decorators
+npm install --save sequelize sequelize-decorators
 npm install --save-dev babel-plugin-transform-decorators-legacy
 ```
 

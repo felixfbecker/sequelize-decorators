@@ -3,9 +3,10 @@ node_js:
  - 'node'
  - 6
  - 4
+before_install:
+ - npm install -g npm@5
 install:
  - npm install
- - typings install
 script:
  - npm run lint
  - npm run build

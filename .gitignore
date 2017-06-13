@@ -5,3 +5,4 @@ dist/
 .nyc_output/
 coverage/
 coverage.lcov
+package-lock.json
