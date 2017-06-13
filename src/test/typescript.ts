@@ -36,6 +36,9 @@ describe('TypeScript', () => {
 
                 @Attribute()
                 public passwordHash: Buffer;
+
+                @Attribute(DataTypes.DATEONLY)
+                public dateOfBirth: string;
             }
 
             assert(stub.calledOnce);
@@ -49,6 +52,7 @@ describe('TypeScript', () => {
             assert.equal(attributes.loginCount, DataTypes.INTEGER);
             assert.equal(attributes.lastLogin, DataTypes.DATE);
             assert.equal(attributes.passwordHash, DataTypes.BLOB);
+            assert.equal(attributes.dateOfBirth, DataTypes.DATEONLY);
 
             assert.equal(typeof options, 'object');
             assert.equal(options.sequelize, sequelize);
