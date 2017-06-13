@@ -14,7 +14,7 @@ export function Attribute(options?: string | DataTypes.DataType | ModelAttribute
     return function(prototype: Object, name: string): void {
         const type = Reflect.getMetadata('design:type', prototype, name);
         /* istanbul ignore else */
-        if (type && (!options || (typeof options !== 'string' && !(options instanceof DataTypes.ABSTRACT) && !(<ModelAttributeColumnOptions>options).type))) {
+        if (type && (!options || (typeof options !== 'string' && typeof options !== 'function' && !(options instanceof DataTypes.ABSTRACT) && !(<ModelAttributeColumnOptions>options).type))) {
             switch (type) {
                 case String: options = DataTypes.STRING; break;
                 case Number: options = DataTypes.INTEGER; break;
