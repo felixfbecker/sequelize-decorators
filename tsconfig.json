@@ -14,8 +14,7 @@
     "noImplicitThis": true,
     "noImplicitReturns": true
   },
-  "exclude": [
-    "node_modules",
-    "dist"
+  "include": [
+    "src/**/*.ts"
   ]
 }
