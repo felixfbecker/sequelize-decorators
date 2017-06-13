@@ -45,7 +45,7 @@ describe('TypeScript', () => {
 
             assert.equal(typeof attributes, 'object');
             assert.equal(attributes.username, usernameAttribute);
-            assert.equal(attributes.firstName, DataTypes.DATEONLY);
+            assert.equal(attributes.firstName, DataTypes.STRING);
             assert.equal(attributes.street, DataTypes.STRING);
             assert.equal(attributes.loginCount, DataTypes.INTEGER);
             assert.equal(attributes.lastLogin, DataTypes.DATE);
