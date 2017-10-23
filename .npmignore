@@ -2,3 +2,11 @@ src/
 typings/
 node_modules/
 .vscode/
+jsconfig.json
+tsconfig.json
+.npmrc
+.travis.yml
+tslint.json
+.eslintrc.json
+.babelrc
+.editorconfig
