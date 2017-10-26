@@ -24,7 +24,7 @@
     "sequelize": "^4.0.0"
   },
   "devDependencies": {
-    "@types/mocha": "2.2.41",
+    "@types/mocha": "2.2.44",
     "@types/node": "8.0.47",
     "@types/sequelize": "types/sequelize#ff2141546a12568a4a3909a561c1ff7971112d20",
     "@types/sinon": "2.3.1",
