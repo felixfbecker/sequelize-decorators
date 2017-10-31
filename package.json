@@ -40,7 +40,7 @@
     "sinon": "^4.0.2",
     "source-map-support": "^0.4.2",
     "tslint": "^5.4.3",
-    "typescript": "^2.3.4"
+    "typescript": "2.5.3"
   },
   "nyc": {
     "include": [
