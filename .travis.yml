@@ -1,16 +1,21 @@
 language: node_js
+
 node_js:
- - 8
- - 6
- - 4
+  - 8
+  - 6
+  - 4
+
 before_install:
- - npm install -g npm@5
+  - npm install -g npm@5
+
 install:
- - npm install
+  - npm install
+
 script:
- - npm run lint
- - npm run build
- - npm run cover
+  - npm run lint
+  - npm run build
+  - npm run cover
 
 after_success:
- - 'nyc report --reporter=lcov > coverage.lcov && codecov'
+  - nyc report --reporter=lcov > coverage.lcov
+  - bash <(curl -s https://codecov.io/bash)
