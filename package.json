@@ -4,6 +4,9 @@
   "description": "Sequelize + Decorators = ❤",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "scripts": {
     "build": "tsc -p . && babel src --out-dir dist",
     "watch": "tsc -w -p . & babel src --out-dir dist --watch",
@@ -41,6 +44,11 @@
     "source-map-support": "^0.4.2",
     "tslint": "^5.4.3",
     "typescript": "^2.3.4"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "@types/node"
+    ]
   },
   "nyc": {
     "include": [

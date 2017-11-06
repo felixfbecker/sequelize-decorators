@@ -1,12 +1,13 @@
 
 # Sequelize + Decorators = ❤
 
-[![Version](https://img.shields.io/npm/v/sequelize-decorators.svg?maxAge=2592000)](https://www.npmjs.com/package/sequelize-decorators)
-[![Downloads](https://img.shields.io/npm/dt/sequelize-decorators.svg?maxAge=2592000)](https://www.npmjs.com/package/sequelize-decorators)
-[![Build Status](https://travis-ci.org/felixfbecker/sequelize-decorators.svg?branch=master)](https://travis-ci.org/felixfbecker/sequelize-decorators)
+[![npm](https://img.shields.io/npm/v/sequelize-decorators.svg?maxAge=2592000)](https://www.npmjs.com/package/sequelize-decorators)
+[![downloads](https://img.shields.io/npm/dt/sequelize-decorators.svg?maxAge=2592000)](https://www.npmjs.com/package/sequelize-decorators)
+[![build](https://travis-ci.org/felixfbecker/sequelize-decorators.svg?branch=master)](https://travis-ci.org/felixfbecker/sequelize-decorators)
 [![codecov](https://codecov.io/gh/felixfbecker/sequelize-decorators/branch/master/graph/badge.svg)](https://codecov.io/gh/felixfbecker/sequelize-decorators)
-[![Dependency Status](https://gemnasium.com/badges/github.com/felixfbecker/sequelize-decorators.svg)](https://gemnasium.com/github.com/felixfbecker/sequelize-decorators)
-[![License](https://img.shields.io/npm/l/sql-template-strings.svg?maxAge=2592000)](https://github.com/felixfbecker/node-sql-template-strings/blob/master/LICENSE.txt)
+[![dependencies](https://gemnasium.com/badges/github.com/felixfbecker/sequelize-decorators.svg)](https://gemnasium.com/github.com/felixfbecker/sequelize-decorators)
+![node](https://img.shields.io/node/v/sequelize-decorators.svg)
+[![license](https://img.shields.io/npm/l/sql-template-strings.svg?maxAge=2592000)](https://github.com/felixfbecker/node-sql-template-strings/blob/master/LICENSE.txt)
 
 A proof of concept for using Sequelize with decorators.
 
