@@ -29,6 +29,10 @@ Add to your `tsconfig.json`:
 ```
 The second setting lets sequelize-decorators infer the type of attributes from the type declaration.
 
+You will also need to install alternative typings since the typings from `@types/sequelize` are obsolete:
+
+npm install --save-dev types/sequelize#424c26457a5af29486d25241f393cde2c69cab8e
+
 ### Example:
 
 ```js
