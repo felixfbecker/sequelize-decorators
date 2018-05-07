@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "config:base",
+    "default:preserveSemverRanges"
+  ],
+  "statusCheckVerify": true,
+  "ignoreDeps": [
+    "@types/node"
+  ]
+}
