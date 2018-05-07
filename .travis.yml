@@ -1,15 +1,16 @@
 language: node_js
 
 node_js:
-  - 8
-  - 6
-  - 4
+  - '10'
+  - '8'
+  - '6'
+  - '4'
 
 before_install:
-  - npm install -g npm@5
+  - npm install -g npm@6.0.0
 
 install:
-  - npm install
+  - npm ci
 
 script:
   - npm run lint
@@ -17,5 +18,10 @@ script:
   - npm run cover
 
 after_success:
-  - nyc report --reporter=lcov > coverage.lcov
+  - nyc report --reporter=json
   - bash <(curl -s https://codecov.io/bash)
+
+branches:
+  only:
+    - master
+    - /^renovate\//
