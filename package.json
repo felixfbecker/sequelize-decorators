@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/mocha": "^5.0.0",
     "@types/node": "^7.0.46",
-    "@types/sequelize": "types/sequelize#660ddda566719608d9f6528690f2bed8643179b8",
+    "@types/sequelize": "types/sequelize#69b371d9dc754d409191556d032dba5aa6f42c53",
     "@types/sinon": "^4.0.0",
     "babel-cli": "^6.14.0",
     "babel-eslint": "^8.0.1",
